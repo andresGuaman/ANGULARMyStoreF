@@ -21,9 +21,10 @@ export class ProductosComponent implements OnInit {
     this.productoService.lista().subscribe(
       data =>{
         this.producto = data;
-        console.log("si esta leyendo los datos")
+        alert("hola");
       },
       err => {
+        alert("nada")
         console.log(err);
       }
     );
