@@ -1,1 +1,23 @@
-<p>productos works!</p>
+<div class="container">
+  <div>
+    <h1 class="text-center">{{Title}}</h1>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 mx-auto" *ngFor = "let dato of producto">
+        <div class="card">
+          <img src="{{producto.pro_imagen}}" class="card-img-top" alt="" width="50" height="200">
+          <div class="card-body">
+            <h5 class="card-title">hola{{producto.pro_codigo}}</h5>
+            <p class="card-text"> Ubicacion </p>
+            <p class="card-text"> Region</p>
+            <div class="card-footer">
+              <button class="btn btn-outline-primary btn-block"  routerLink = "/info/{{dato.id}}">Ver</button>
+            </div>
+          </div>
+        </div>
+        <br>
+      </div>
+    </div>
+  </div>
+</div>

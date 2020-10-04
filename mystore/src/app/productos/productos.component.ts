@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Producto } from "../modelo/producto";
+import { Router } from "@angular/router";
+import { ProductoService } from "../servicios/producto.service";
 
 @Component({
   selector: 'app-productos',
@@ -6,10 +9,24 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./productos.component.css']
 })
 export class ProductosComponent implements OnInit {
-
-  constructor() { }
+  Title="Resien Agregados";
+  producto: Producto[]=[];
+  constructor(private productoService : ProductoService) { }
 
   ngOnInit(): void {
+    this.cargarProducto
+  }
+
+  cargarProducto(): void{
+    this.productoService.lista().subscribe(
+      data =>{
+        this.producto = data;
+        console.log("si esta leyendo los datos")
+      },
+      err => {
+        console.log(err);
+      }
+    );
   }
 
 }

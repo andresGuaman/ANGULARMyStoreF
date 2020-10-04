@@ -19,22 +19,19 @@ export class NewproductoComponent implements OnInit {
   pro_stock = null;
   cat_id= null;
 
-  constructor(
-    private productoService: ProductoService,
-    private router: Router;
-  ) { }
+  constructor(private productoService: ProductoService, private router: Router ) { }
 
   ngOnInit(): void {}
 
   onCreate(): void{
-    const producto = new Producto(this.pro_codigo, this.pro_costo, this.pro_descripcion, this.pro_foto, this.marca,this.pro_modelo, this.pro_precio, this.pro_stock, this.cat_id);
+    const producto = new Producto(this.pro_codigo, this.pro_costo, this.pro_descripcion, this.pro_foto, this.pro_marca,this.pro_modelo, this.pro_precio, this.pro_stock, this.cat_id);
     this.productoService.guardar(producto).subscribe(
       data =>{
         this.router.navigate(['/productos']);
       },
       err =>{
-        this.router.navigate(['/productos']);
         alert("Error");
+        this.router.navigate(['/productos']);
       }
     );
   }
