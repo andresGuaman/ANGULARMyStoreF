@@ -10,17 +10,17 @@ import { ProductoService } from "../servicios/producto.service";
 })
 export class ProductosComponent implements OnInit {
   Title="Resien Agregados";
-  producto: Producto[]=[];
+  productos: Producto[]=[];
   constructor(private productoService : ProductoService) { }
 
   ngOnInit(): void {
-    this.cargarProducto
+    this.cargarProducto();
   }
 
   cargarProducto(): void{
     this.productoService.lista().subscribe(
       data =>{
-        this.producto = data;
+        this.productos = data;
         alert("hola");
       },
       err => {
