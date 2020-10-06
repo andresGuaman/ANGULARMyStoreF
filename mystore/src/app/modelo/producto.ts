@@ -1,6 +1,6 @@
 export class Producto{
   pro_id?: number;
-  pro_codigo: string;
+  pro_codigo_barra: string;
   pro_costo: number;
   pro_descripcion: string;
   pro_foto: string;
@@ -9,8 +9,8 @@ export class Producto{
   pro_precio: number;
   pro_stock: number;
   cat_id: number;
-  constructor(pro_codigo: string, pro_costo: number, pro_descripcion: string, pro_foto: string, pro_marca: string, pro_modelo: string, pro_precio: number, pro_stock: number, cat_id: number){
-    this.pro_codigo = pro_codigo;
+  constructor(pro_codigo_barra: string, pro_costo: number, pro_descripcion: string, pro_foto: string, pro_marca: string, pro_modelo: string, pro_precio: number, pro_stock: number, cat_id: number){
+    this.pro_codigo_barra = pro_codigo_barra;
     this.pro_costo = pro_costo;
     this.pro_descripcion = pro_descripcion;
     this.pro_foto = pro_foto;
