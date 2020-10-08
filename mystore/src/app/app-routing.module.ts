@@ -3,12 +3,15 @@ import { Routes, RouterModule } from '@angular/router';
 import { NewproductoComponent } from './newproducto/newproducto.component';
 import { ProductosComponent } from "./productos/productos.component";
 import { ProdetalleComponent} from "./prodetalle/prodetalle.component";
-
+import { ProveedorComponent } from "./proveedor/proveedor.component";
+import { CategoriaComponent } from "./categoria/categoria.component";
 
 const routes: Routes = [
-  {path: "nuevo", component: NewproductoComponent},
+  {path: "newproducto", component: NewproductoComponent},
   {path: "lista", component: ProductosComponent},
-  {path: 'producto/:id', component: ProdetalleComponent}
+  {path: 'producto/:id', component: ProdetalleComponent},
+  {path: 'proveedor', component: ProveedorComponent},
+  {path: 'categoria', component: CategoriaComponent}
 ];
 
 @NgModule({

@@ -10,6 +10,8 @@ import { FooterComponent } from './footer/footer.component';
 import { ProductosComponent } from './productos/productos.component';
 import { HttpClientModule} from "@angular/common/http";
 import { FormsModule} from "@angular/forms";
+import { CategoriaComponent } from './categoria/categoria.component';
+import { ProveedorComponent } from './proveedor/proveedor.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { FormsModule} from "@angular/forms";
     ProdetalleComponent,
     CabeceraComponent,
     FooterComponent,
-    ProductosComponent
+    ProductosComponent,
+    CategoriaComponent,
+    ProveedorComponent
   ],
   imports: [
     BrowserModule,

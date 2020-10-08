@@ -1,0 +1,64 @@
+<div>
+  <ul class="nav justify-content-center">
+    <li class="nav-item">
+      <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Proveedor</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Categoria</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link active">Producto</a>
+    </li>
+  </ul>
+  <div class="container">
+  <div class="row-mt-5">
+    <div class="col-md-4 mx-auto">
+      <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+        <div class="fore-group">
+          <label for="pro_codigo_barra">Codigo de Barras</label>
+          <input type="text" class="form-control" id="pro_codigo_barra" name="pro_codigo_barra"
+           [(ngModel)]="pro_codigo_barra" required>
+        </div>
+        <div class="fore-group">
+          <label for="pro_costo">Costo</label>
+          <input type="text" class="form-control" id="pro_costo" name="pro_costo"
+           [(ngModel)]="pro_costo" required>
+        </div>
+        <div class="fore-group">
+          <label for="pro_descripcion">Descripcion</label>
+          <input type="text" class="form-control" id="pro_descripcion" name="pro_descripcion"
+           [(ngModel)]="pro_descripcion" required>
+        </div>
+        <div class="fore-group">
+          <label for="pro_foto">Foto</label>
+          <input type="text" class="form-control" id="pro_foto" name="pro_foto"
+           [(ngModel)]="pro_foto" required>
+        </div>
+        <div class="fore-group">
+          <label for="pro_marca">Marca</label>
+          <input type="text" class="form-control" id="pro_marca" name="pro_marca"
+           [(ngModel)]="pro_marca" required>
+        </div>
+        <div class="fore-group">
+          <label for="pro_modelo">Modelo</label>
+          <input type="text" class="form-control" id="pro_modelo" name="pro_modelo"
+           [(ngModel)]="pro_modelo" required>
+        </div>
+        <div class="fore-group">
+          <label for="pro_precio">Precio</label>
+          <input type="text" class="form-control" id="pro_precio" name="pro_precio"
+           [(ngModel)]="pro_precio" required>
+        </div>
+        <div class="fore-group">
+          <label for="pro_stock">Stok</label>
+          <input type="text" class="form-control" id="pro_stock" name="pro_stock"
+           [(ngModel)]="pro_stock" required>
+        </div>
+        <br>
+        <button class="btn btn-outline-success btn-block" [disabled]="!f.valid">Guardar Producto</button>
+        <br>
+      </form>
+    </div>
+  </div>
+</div>
+</div>

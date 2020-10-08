@@ -1,0 +1,49 @@
+<div>
+  <ul class="nav justify-content-center">
+    <li class="nav-item">
+      <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Proveedor</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link active">Categoria</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Producto</a>
+    </li>
+  </ul>
+  <div class="container">
+  <div class="row-mt-5">
+    <div class="col-md-4 mx-auto">
+      <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+        <div class="fore-group">
+          <label for="cat_categoria">Categoria</label>
+          <input type="text" class="form-control" id="cat_categoria" name="cat_categoria"
+           [(ngModel)]="cat_categoria" required>
+        </div>
+        <div class="fore-group">
+          <label for="cat_color">Color</label>
+          <input type="text" class="form-control" id="cat_color" name="cat_color"
+           [(ngModel)]="cat_color" required>
+        </div>
+        <div class="fore-group">
+          <label for="cat_edad">Rango de Usuario</label>
+          <input type="text" class="form-control" id="cat_edad" name="cat_edad"
+           [(ngModel)]="cat_edad" required>
+        </div>
+        <div class="fore-group">
+          <label for="cat_genero">Genero</label>
+          <input type="text" class="form-control" id="cat_genero" name="cat_genero"
+           [(ngModel)]="cat_genero" required>
+        </div>
+        <div class="fore-group">
+          <label for="cat_marca">Marca</label>
+          <input type="text" class="form-control" id="cat_marca" name="cat_marca"
+           [(ngModel)]="cat_marca" required>
+        </div>
+        <br>
+        <button class="btn btn-outline-success btn-block" [disabled]="!f.valid">Siguiente</button>
+        <br>
+      </form>
+    </div>
+  </div>
+</div>
+</div>
