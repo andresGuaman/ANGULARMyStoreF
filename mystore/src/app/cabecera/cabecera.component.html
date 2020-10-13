@@ -1,9 +1,10 @@
+
 <div>
   <nav class = "navbar  navbar-dark bg-primary">
   <a  class="navbar-brand" href="#">MyStore</a>
   <ul class="nav">
   <li class="nav-item">
-    <a class="nav-link" routerLink = "/lista" ><img src="https://www.flaticon.com/svg/static/icons/svg/1946/1946436.svg" alt="home" width="25" height="25"></a>
+    <a class="nav-link" routerLink = "/home" ><img src="https://www.flaticon.com/svg/static/icons/svg/1946/1946436.svg" alt="home" width="25" height="25"></a>
   </li>
   <li class="nav-item">
     <a class="nav-link"routerLink = "/proveedor"><img src="https://www.flaticon.com/svg/static/icons/svg/1381/1381635.svg" alt="comentarios" width="25" height="25"> </a>
@@ -19,9 +20,17 @@
     <input class="form-control mr-sm-2" type="search" placeholder="Buscar Producto" aria-label="Search">
     <button class="btn btn-outline-dark" type="submit">Buscar</button>
     <button class="btn btn-outline-succes my-2 my-sm-0" type="submit"><img src="https://www.flaticon.com/svg/static/icons/svg/711/711192.svg" alt="carro" width="25" height="25"></button>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#barra" aria-controls="barra" aria-expanded="true" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+    <li class="nav-item dropdown">
+      <button class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <span class="navbar-toggler-icon"></span></button>
+        <div class="drop">
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" routerLink = "login">Iniciar Sesion</a>
+            <a class="dropdown-item" routerLink = "registro">Registrarse</a>
+            <a class="dropdown-item" routerLink = "/proveedor">Administrar</a>
+          </div>
+        </div>
+    </li>
   </form>
   </nav>
 </div>

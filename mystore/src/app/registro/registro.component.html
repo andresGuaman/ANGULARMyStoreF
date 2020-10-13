@@ -1,0 +1,44 @@
+<div>
+  <h4 class="text-center">Nuevo Cliente</h4>
+ <div class="container">
+  <div class="row-mt-5">
+    <div class="col-md-4 mx-auto">
+      <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+        <div class="fore-group">
+          <label for="per_cedula">Cedula</label>
+          <input type="text" class="form-control" id="per_cedula" name="per_cedula"
+           [(ngModel)]="per_cedula" required>
+        </div>
+        <div class="fore-group">
+          <label for="per_nombre">Nombre</label>
+          <input type="text" class="form-control" id="per_nombre" name="per_nombre"
+           [(ngModel)]="per_nombre" required>
+        </div>
+        <div class="fore-group">
+          <label for="per_apellido">Apellido</label>
+          <input type="text" class="form-control" id="per_apellido" name="per_apellido"
+           [(ngModel)]="per_apellido" required>
+        </div>
+        <div class="fore-group">
+          <label for="per_telefono">Telefono</label>
+          <input type="text" class="form-control" id="per_telefono" name="per_telefono"
+           [(ngModel)]="per_telefono" required>
+        </div>
+        <div class="fore-group">
+          <label for="per_correo">Correo</label>
+          <input type="text" class="form-control" id="per_correo" name="per_correo"
+           [(ngModel)]="per_correo" required>
+        </div>
+        <div class="fore-group">
+          <label for="per_foto">Foto</label>
+          <input type="text" class="form-control" id="per_foto" name="per_foto"
+           [(ngModel)]="per_foto" required>
+        </div>
+        <br>
+        <button class="btn btn-outline-success btn-block" [disabled]="!f.valid">Siguiente</button>
+        <br>
+      </form>
+    </div>
+  </div>
+</div>
+</div>

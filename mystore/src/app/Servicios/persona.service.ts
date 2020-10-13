@@ -13,11 +13,11 @@ export class PersonaService {
 
 
   public lista(): Observable<Persona[]> {
-    return this.httpClient.get<Producto[]>(this.personaUrl+"/Persona");
+    return this.httpClient.get<Persona[]>(this.personaUrl+"/Persona");
   }
 
   public detalle(id: number): Observable<Persona>{
-    return this.httpClient.get<Producto>(this.personaUrl+`/Persona/${id}`)
+    return this.httpClient.get<Persona>(this.personaUrl+`/Persona/${id}`)
   }
 
   public guardar(persona: Persona): Observable<any>{
@@ -25,10 +25,10 @@ export class PersonaService {
   }
 
   public update(id: number, persona: Persona): Observable<any>{
-    return this.httpClient.put<any>(this.productoUrl+`Persona/${id}`, persona);
+    return this.httpClient.put<any>(this.personaUrl+`Persona/${id}`, persona);
   }
 
   public delete(id: number): Observable<any>{
-    return this.httpClient.delete<any>(this.productoUrl+`Persona/${id}`)
+    return this.httpClient.delete<any>(this.personaUrl+`Persona/${id}`)
   }
 }
