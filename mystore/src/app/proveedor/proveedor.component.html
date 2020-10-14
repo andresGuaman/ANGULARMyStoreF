@@ -1,34 +1,44 @@
-<div>
-  <ul class="nav justify-content-center">
-  <li class="nav-item">
-    <a class="nav-link active">Proveedor</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Categoria</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Producto</a>
-  </li>
- </ul>
- <div class="container">
-  <div class="row-mt-5">
-    <div class="col-md-4 mx-auto">
-      <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
-        <div class="fore-group">
-          <label for="prov_empresa">Empresa</label>
-          <input type="text" class="form-control" id="prov_empresa" name="prov_empresa"
-           [(ngModel)]="prov_empresa" required>
+<mat-drawer-container class="example-container" autosize>
+  <mat-drawer mode = "side" >
+    <a routerLink = "login">Añadir Producto</a>
+    <br>
+    <br>
+    <a routerLink = "editar">Editar Producto</a>
+  </mat-drawer>
+  <mat-drawer-container>
+    <div>
+      <ul class="nav justify-content-center">
+      <li class="nav-item">
+        <a class="nav-link active">Proveedor</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Categoria</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Producto</a>
+      </li>
+     </ul>
+     <div class="container">
+      <div class="row-mt-5">
+        <div class="col-md-4 mx-auto">
+          <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+            <div class="fore-group">
+              <label for="prov_empresa">Empresa</label>
+              <input type="text" class="form-control" id="prov_empresa" name="prov_empresa"
+               [(ngModel)]="prov_empresa" required>
+            </div>
+            <div class="fore-group">
+              <label for="prov_ruc">RUC</label>
+              <input type="text" class="form-control" id="prov_ruc" name="prov_ruc"
+               [(ngModel)]="prov_ruc" required>
+            </div>
+            <br>
+            <button class="btn btn-outline-success btn-block" [disabled]="!f.valid">Siguiente</button>
+            <br>
+          </form>
         </div>
-        <div class="fore-group">
-          <label for="prov_ruc">RUC</label>
-          <input type="text" class="form-control" id="prov_ruc" name="prov_ruc"
-           [(ngModel)]="prov_ruc" required>
-        </div>
-        <br>
-        <button class="btn btn-outline-success btn-block" [disabled]="!f.valid">Siguiente</button>
-        <br>
-      </form>
+      </div>
     </div>
-  </div>
-</div>
-</div>
+    </div>
+  </mat-drawer-container>
+</mat-drawer-container>

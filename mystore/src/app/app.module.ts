@@ -17,6 +17,11 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { RegistroComponent } from './registro/registro.component';
 import { ClienteComponent } from './cliente/cliente.component';
+import {MatDividerModule} from '@angular/material/divider';
+import { AdministradorComponent } from './administrador/administrador.component';
+import { CarritoComponent } from './carrito/carrito.component';
+import { EditempleadoComponent } from './editempleado/editempleado.component';
+
 
 @NgModule({
   declarations: [
@@ -31,7 +36,10 @@ import { ClienteComponent } from './cliente/cliente.component';
     HomeComponent,
     LoginComponent,
     RegistroComponent,
-    ClienteComponent
+    ClienteComponent,
+    AdministradorComponent,
+    CarritoComponent,
+    EditempleadoComponent
   ],
   imports: [
     BrowserModule,
