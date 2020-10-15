@@ -9,7 +9,7 @@ import { ProductoService } from "../servicios/producto.service";
   styleUrls: ['./productos.component.css']
 })
 export class ProductosComponent implements OnInit {
-  Title="Resien Agregados";
+  Title="Mas Buscados";
   productos: Producto[]=[];
   constructor(private productoService : ProductoService) { }
 

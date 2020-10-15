@@ -8,7 +8,7 @@ import { Empleado } from "../modelo/empleado";
 })
 export class EmpleadoService {
 
-  empleadoUrl = "http://localhost/9898/api/v1"
+  empleadoUrl = "http://localhost:9898"
   constructor( private httpClient: HttpClient) { }
 
   public lista(): Observable<Empleado[]> {

@@ -19,7 +19,7 @@ export class AdministradorComponent implements OnInit {
   }
 
   empleados(): void{
-    this.router.navigate(["administrar/empleados"])
+    this.router.navigate(["empleado"])
   }
 
 }

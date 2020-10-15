@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Empleado } from "../modelo/empleado";
+import { EmpleadoService } from "../servicios/empleado.service";
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'app-editempleado',

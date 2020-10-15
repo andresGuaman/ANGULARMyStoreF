@@ -1,1 +1,66 @@
-<p>empleado works!</p>
+<mat-drawer-container class="example-container" autosize>
+  <mat-drawer mode = "side" >
+    <a href="empleado">Añadir Empleado</a>
+    <br>
+    <br>
+    <a href = "empleadoedit">Editar Empleado</a>
+    <br>
+    <br>
+    <a href="administrar">Regresar</a>
+  </mat-drawer>
+  <mat-drawer-container>
+  <div class="container">
+  <div class="container">
+    <div class="row-mt-5">
+      <div class="col-md-4 mx-auto">
+        <form (ngSubmit)="onCreateRol()" novalidate #f="ngForm">
+          <h5> Ingresar Departamento</h5>
+          <div class="fore-group">
+            <label for="rol_nombre">Nombre</label>
+            <input type="text" class="form-control" id="rol_nombre" name="rol_nombre"
+             [(ngModel)]="rol_nombre" required>
+          </div>
+          <div class="fore-group">
+            <label for="rol_departamento">Departamento</label>
+            <input type="text" class="form-control" id="rol_departamento" name="rol_departamento"
+             [(ngModel)]="rol_departamento" required>
+          </div>
+          <br>
+          <button class="btn btn-outline-success btn-block" [disabled]="!f.valid">Añadir</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <br>
+  <br>
+  <div class="container" *ngIf = "very">
+    <div class="row-mt-5">
+      <div class="col-md-4 mx-auto">
+        <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+          <h5>Empleado Nuevo</h5>
+          <div class="fore-group">
+            <label for="emp_usuario">Usuario</label>
+            <input type="text" class="form-control" id="emp_usuario" name="emp_usuario"
+             [(ngModel)]="emp_usuario" required>
+          </div>
+          <div class="fore-group">
+            <label for="emp_salario">Salario</label>
+            <input type="text" class="form-control" id="emp_salario" name="emp_salario"
+             [(ngModel)]="emp_salario" required>
+          </div>
+          <div class="fore-group">
+            <label for="emp_password">Contraseña</label>
+            <input type="text" class="form-control" id="emp_password" name="emp_password"
+             [(ngModel)]="emp_password" required>
+          </div>
+          <br>
+          <button class="btn btn-outline-success btn-block" [disabled]="!f.valid">Crear</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <br>
+  <br>
+</div>
+</mat-drawer-container>
+</mat-drawer-container>

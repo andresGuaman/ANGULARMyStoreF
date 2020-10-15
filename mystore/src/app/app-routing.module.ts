@@ -13,10 +13,12 @@ import { CarritoComponent } from "./carrito/carrito.component";
 import { ClienteComponent } from "./cliente/cliente.component";
 import { EditproductoComponent } from "./editproducto/editproducto.component";
 import { ChatComponent } from "./chat/chat.component";
+import { EmpleadoComponent } from "./empleado/empleado.component";
+import { EditempleadoComponent } from "./editempleado/editempleado.component";
 
 const routes: Routes = [
   {path: "newproducto", component: NewproductoComponent},
-
+  {path: "empleado", component: EmpleadoComponent},
   {path: "administrar", component: AdministradorComponent},
   {path: "lista", component: ProductosComponent},
   {path: 'producto/:id', component: ProdetalleComponent},
@@ -28,7 +30,8 @@ const routes: Routes = [
   {path: 'home', component: HomeComponent},
   {path: 'carrito', component: CarritoComponent},
   {path: 'cliente', component: ClienteComponent},
-  {path: 'chat', component: ChatComponent}
+  {path: 'chat', component: ChatComponent},
+  {path: 'empleadoedit', component: EditempleadoComponent}
 ];
 
 @NgModule({
