@@ -1,0 +1,78 @@
+<mat-drawer-container class="example-container" autosize>
+  <mat-drawer mode = "side" >
+    <a href="Producto">Añadir Producto</a>
+    <br>
+    <br>
+    <a href = "editar">Editar Producto</a>
+  </mat-drawer>
+  <mat-drawer-container>
+  <div class="container" *ngFor = "let dato of productos">
+    <h2>Productos</h2>
+    <table>
+      <tr>
+        <th>Codigo</th><th>Producto</th><th>Costo</th><th>Editar</th><th>Eliminar</th>
+      </tr>
+      <tr>
+    <td>{{dato.pro_codigo_barra}}</td>
+    <td>{{dato.pro_descripcion}}</td>
+    <td>{{dato.pro_costo}}</td>
+    <td><button type="button" class="btn btn-link" (click) = "buscar(dato.pro_id)">Editar</button></td>
+    <td><button type="button" class="btn btn-link" (click) = "delete(dato.pro_id)">Eliminar</button></td>
+  </tr>
+</table>
+<br>
+  </div>
+  <div class="container" *ngIf= "producto">
+  <div class="row-mt-5">
+    <div class="col-md-4 mx-auto">
+      <h2>Editar Producto</h2>
+      <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+        <div class="fore-group">
+          <label for="pro_codigo_barra">Codigo de Barras</label>
+          <input type="text" class="form-control" id="pro_codigo_barra" name="pro_codigo_barra"
+           [(ngModel)]="producto.pro_codigo_barra" required>
+        </div>
+        <div class="fore-group">
+          <label for="pro_costo">Costo</label>
+          <input type="text" class="form-control" id="pro_costo" name="pro_costo"
+           [(ngModel)]="producto.pro_costo" required>
+        </div>
+        <div class="fore-group">
+          <label for="pro_descripcion">Descripcion</label>
+          <input type="text" class="form-control" id="pro_descripcion" name="pro_descripcion"
+           [(ngModel)]="producto.pro_descripcion" required>
+        </div>
+        <div class="fore-group">
+          <label for="pro_foto">Foto</label>
+          <input type="text" class="form-control" id="pro_foto" name="pro_foto"
+           [(ngModel)]="producto.pro_foto" required>
+        </div>
+        <div class="fore-group">
+          <label for="pro_marca">Marca</label>
+          <input type="text" class="form-control" id="pro_marca" name="pro_marca"
+           [(ngModel)]="producto.pro_marca" required>
+        </div>
+        <div class="fore-group">
+          <label for="pro_modelo">Modelo</label>
+          <input type="text" class="form-control" id="pro_modelo" name="pro_modelo"
+           [(ngModel)]="producto.pro_modelo" required>
+        </div>
+        <div class="fore-group">
+          <label for="pro_precio">Precio</label>
+          <input type="text" class="form-control" id="pro_precio" name="pro_precio"
+           [(ngModel)]="producto.pro_precio" required>
+        </div>
+        <div class="fore-group">
+          <label for="pro_stock">Stok</label>
+          <input type="text" class="form-control" id="pro_stock" name="pro_stock"
+           [(ngModel)]="producto.pro_stock" required>
+        </div>
+        <br>
+        <button class="btn btn-outline-success btn-block" [disabled]="!f.valid">Actualizar</button>
+      </form>
+    </div>
+  </div>
+</div>
+<br>
+  </mat-drawer-container>
+</mat-drawer-container>

@@ -14,19 +14,21 @@ export class ClienteComponent implements OnInit {
                private router: Router) { }
   cli_usuario = "";
   cli_password = "";
-  cli_descuento = "veinte"
+  cli_descuento = 20;
   ngOnInit(): void {
   }
 
   onCreate(): void{
-    const cliente = new Cliente(this.cli_usuario, this.cli_password, this.cli_descuento);
+    const cliente = new Cliente(this.cli_descuento, this.cli_password, this.cli_usuario);
     this.clienteService.guardar(cliente).subscribe(
       data => {
+        alert("Pago")
         this.router.navigate(['lista'])
       },
       err => {
         alert(err)
         this.router.navigate(['home'])
+        console.log(err)
       }
     );
   }

@@ -1,1 +1,20 @@
-<p>cliente works!</p>
+<div class="container">
+  <div class="row-mt-5">
+    <div class="col-md-4 mx-auto">
+      <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+        <div class="fore-group">
+          <label for="cli_usuario">Usuario</label>
+          <input type="text" class="form-control" id="cli_usuario" name="cli_usuario"
+           [(ngModel)]="cli_usuario" required>
+        </div>
+        <div class="fore-group">
+          <label for="cli_password">Contraseña</label>
+          <input type="text" class="form-control" id="cli_password" name="cli_password"
+           [(ngModel)]="cli_password" required>
+        </div>
+        <br>
+        <button class="btn btn-outline-success btn-block" [disabled]="!f.valid">Crear</button>
+      </form>
+    </div>
+  </div>
+</div>

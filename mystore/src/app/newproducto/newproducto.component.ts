@@ -26,11 +26,11 @@ export class NewproductoComponent implements OnInit {
     const producto = new Producto(this.pro_codigo_barra, this.pro_costo, this.pro_descripcion, this.pro_foto, this.pro_marca,this.pro_modelo, this.pro_precio, this.pro_stock);
     this.productoService.guardar(producto).subscribe(
       data =>{
-        this.router.navigate(['/productos']);
+        this.router.navigate(['/lista']);
       },
       err =>{
         alert("Error");
-        this.router.navigate(['/productos']);
+        this.router.navigate(['/lista']);
       }
     );
   }
