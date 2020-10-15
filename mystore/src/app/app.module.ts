@@ -21,6 +21,8 @@ import { AdministradorComponent } from './administrador/administrador.component'
 import { CarritoComponent } from './carrito/carrito.component';
 import { EditempleadoComponent } from './editempleado/editempleado.component';
 import { EditproductoComponent } from './editproducto/editproducto.component';
+import { ChatComponent } from './chat/chat.component';
+import { EmpleadoComponent } from './empleado/empleado.component';
 
 
 @NgModule({
@@ -40,7 +42,9 @@ import { EditproductoComponent } from './editproducto/editproducto.component';
     AdministradorComponent,
     CarritoComponent,
     EditempleadoComponent,
-    EditproductoComponent
+    EditproductoComponent,
+    ChatComponent,
+    EmpleadoComponent
   ],
   imports: [
     BrowserModule,

@@ -12,6 +12,7 @@ import { AdministradorComponent } from "./administrador/administrador.component"
 import { CarritoComponent } from "./carrito/carrito.component";
 import { ClienteComponent } from "./cliente/cliente.component";
 import { EditproductoComponent } from "./editproducto/editproducto.component";
+import { ChatComponent } from "./chat/chat.component";
 
 const routes: Routes = [
   {path: "newproducto", component: NewproductoComponent},
@@ -26,7 +27,8 @@ const routes: Routes = [
   {path: 'registro', component:  RegistroComponent},
   {path: 'home', component: HomeComponent},
   {path: 'carrito', component: CarritoComponent},
-  {path: 'cliente', component: ClienteComponent}
+  {path: 'cliente', component: ClienteComponent},
+  {path: 'chat', component: ChatComponent}
 ];
 
 @NgModule({
