@@ -25,7 +25,7 @@ const routes: Routes = [
   {path: 'Producto', component: ProveedorComponent},
   {path: 'Producto/editar', component: EditproductoComponent},
   {path: 'categoria', component: CategoriaComponent},
-  {path: 'proveedor/login', component: LoginComponent},
+  {path: 'login', component: LoginComponent},
   {path: 'registro', component:  RegistroComponent},
   {path: 'home', component: HomeComponent},
   {path: 'carrito', component: CarritoComponent},

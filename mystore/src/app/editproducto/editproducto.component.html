@@ -32,7 +32,7 @@
   <div class="row-mt-5">
     <div class="col-md-4 mx-auto">
       <h2>Editar Producto</h2>
-      <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+      <form  novalidate #f="ngForm">
         <div class="fore-group">
           <label for="pro_codigo_barra">Codigo de Barras</label>
           <input type="text" class="form-control" id="pro_codigo_barra" name="pro_codigo_barra"
@@ -74,7 +74,7 @@
            [(ngModel)]="producto.pro_stock" required>
         </div>
         <br>
-        <button class="btn btn-outline-success btn-block" [disabled]="!f.valid">Actualizar</button>
+        <button class="btn btn-outline-success btn-block" [disabled]="!f.valid" (click)="onUpdate(producto.pro_id)">Actualizar</button>
       </form>
     </div>
   </div>

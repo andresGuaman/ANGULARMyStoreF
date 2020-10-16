@@ -20,6 +20,10 @@ export class ClienteService {
     return this.httpClient.get<Cliente>(this.url+`Cliente/${id}`);
   }
 
+  public login(usu: string, pass: string): Observable<Cliente>{
+    return this.httpClient.get<Cliente>(this.url+`Cliente/${usu}/${pass}`);
+  }
+
   public guardar(cliente: Cliente): Observable<any>{
     return this.httpClient.post<any>(this.url+"Cliente",cliente);
   }

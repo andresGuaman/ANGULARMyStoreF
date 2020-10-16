@@ -1,13 +1,24 @@
-<div class="card text-center">
-  <div class="card-header">
-    Inicio de Sesion
+<div>
+  <h4 class="text-center">Nuevo Cliente</h4>
+ <div class="container">
+  <div class="row-mt-5">
+    <div class="col-md-4 mx-auto">
+      <form (ngSubmit)="ingresar()" novalidate #f="ngForm">
+        <div class="fore-group">
+          <label for="cli_usuario">Usuario</label>
+          <input type="text" class="form-control" id="cli_usuario" name="cli_usuario"
+           [(ngModel)]="cli_usuario" required>
+        </div>
+        <div class="fore-group">
+          <label for="cli_password">Contraseña</label>
+          <input type="text" class="form-control" id="cli_password" name="cli_password"
+           [(ngModel)]="cli_password" required>
+        </div>
+        <br>
+        <button class="btn btn-outline-success btn-block" [disabled]="!f.valid">Ingresar</button>
+        <br>
+      </form>
+    </div>
   </div>
-  <div class="card-body">
-    <label for="cat_categoria">Categoria</label>
-    <input type="text" class="form-control" id="cat_categoria" name="cat_categoria"
-  </div>
-  <div class="card-footer text-muted">
-
-    <button type="button" name="button" routerLink = "proveedor">Registrarse</button>
-  </div>
+</div>
 </div>

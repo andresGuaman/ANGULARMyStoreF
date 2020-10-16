@@ -54,8 +54,7 @@ export class EditproductoComponent implements OnInit {
     );
   }
 
-  onUpdate(): void{
-    const id: number = 12;
+  onUpdate( id : number){
     this.productoService.update(id, this.producto). subscribe(
       data =>{
         alert("Producto Actualizado");
