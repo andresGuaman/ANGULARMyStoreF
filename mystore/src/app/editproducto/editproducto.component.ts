@@ -12,7 +12,8 @@ export class EditproductoComponent implements OnInit {
 
   productos: Producto []=[];
   producto: Producto = null;
-  constructor(private productoService: ProductoService) { }
+  constructor(private productoService: ProductoService,
+              private router: Router) { }
 
   ngOnInit(): void {
     this.listar();
@@ -59,6 +60,7 @@ export class EditproductoComponent implements OnInit {
       data =>{
         alert("Producto Actualizado");
         this.producto = null;
+        this.router.navigate(['/administrar'])
       },
       err =>{
         console.log(err);

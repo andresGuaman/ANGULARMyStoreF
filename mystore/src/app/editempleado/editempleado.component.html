@@ -1,1 +1,60 @@
-<p>editempleado works!</p>
+<mat-drawer-container class="example-container" autosize>
+  <mat-drawer mode = "side" >
+    <a href="Producto">Añadir Empleado</a>
+    <br>
+    <br>
+    <a href = "editar">Editar Empleado</a>
+    <br>
+    <br>
+    <a href="administrar">Regresar</a>
+  </mat-drawer>
+  <mat-drawer-container>
+  <div class="container" *ngIf = empleados>
+    <h4>No se tiene registro de ningun empleado</h4>
+  </div>
+  <div class="container" *ngFor = "let dato of empleados">
+    <h2>Empleados</h2>
+    <table>
+      <tr>
+        <th>Codigo</th><th>Usuario</th><th>Contraseña</th><th>Salario</th><th>Editar</th><th>Eliminar</th>
+      </tr>
+      <tr>
+    <td>{{dato.emp_id}}</td>
+    <td>{{dato.emp_usuario}}</td>
+    <td>{{dato.emp_password}}</td>
+    <td>{{dato.emp_salario}}</td>
+    <td><button type="button" class="btn btn-link" (click) = "buscar(dato.emp_id)">Editar</button></td>
+    <td><button type="button" class="btn btn-link" (click) = "delete(dato.emp_id)">Eliminar</button></td>
+  </tr>
+</table>
+<br>
+  </div>
+  <div class="container" *ngIf= "empleado">
+  <div class="row-mt-5">
+    <div class="col-md-4 mx-auto">
+      <h2>Editar Empleado</h2>
+      <form novalidate #f="ngForm">
+        <div class="fore-group">
+          <label for="emp_usuario">Usuario</label>
+          <input type="text" class="form-control" id="emp_usuario" name="emp_usuario"
+           [(ngModel)]="empleado.emp_usuario" required>
+        </div>
+        <div class="fore-group">
+          <label for="emp_password">Contraseña</label>
+          <input type="text" class="form-control" id="emp_password" name="emp_password"
+           [(ngModel)]="empleado.emp_password" required>
+        </div>
+        <div class="fore-group">
+          <label for="emp_salario">Salario</label>
+          <input type="text" class="form-control" id="emp_salario" name="emp_salario"
+           [(ngModel)]="empleado.emp_salario" required>
+        </div>
+        <br>
+        <button class="btn btn-outline-success btn-block" [disabled]="!f.valid" (click) = "onUpdate(empleado.emp_id)">Actualizar</button>
+      </form>
+    </div>
+  </div>
+</div>
+<br>
+  </mat-drawer-container>
+</mat-drawer-container>

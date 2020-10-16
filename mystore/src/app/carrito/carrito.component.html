@@ -1,6 +1,19 @@
 <div class="container text-center">
-  <h5>Tus Productos</h5>
-  <div>
-    
+  <div *ngIf = "data">
+    <div class="container" *ngFor = "let dato of data">
+      <h2>Tus Productos</h2>
+      <table>
+        <tr>
+          <th>Codigo</th><th>Usuario</th><th>Contraseña</th><th>Quitar</th>
+        </tr>
+        <tr>
+      <td>{{dato.pro_codigo_barra}}</td>
+      <td>{{dato.pro_descripcion}}</td>
+      <td>{{dato.pro_precio}}</td>
+      <td><button type="button" class="btn btn-link">Quitar</button></td>
+    </tr>
+  </table>
+  <br>
+    </div>
   </div>
 </div>
